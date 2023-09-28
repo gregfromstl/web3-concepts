@@ -1,5 +1,5 @@
 "use client";
-import { Swipe } from "@/components/swipe/Swipe";
+import { Swipe } from "@/components/friend-tech-cashout/swipe/Swipe";
 import { QuestionMarkCircleIcon } from "@heroicons/react/24/outline";
 import { AnimatePresence } from "framer-motion";
 import Image from "next/image";
