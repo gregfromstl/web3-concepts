@@ -11,10 +11,13 @@
     "dependencies": {
         "@heroicons/react": "^2.0.18",
         "@rive-app/react-canvas": "^4.3.3",
+        "@types/mapbox-gl": "^2.7.15",
         "framer-motion": "^10.16.4",
+        "mapbox-gl": "^2.15.0",
         "next": "latest",
         "react": "latest",
-        "react-dom": "latest"
+        "react-dom": "latest",
+        "react-map-gl": "^7.1.6"
     },
     "devDependencies": {
         "@types/node": "latest",
