@@ -5,7 +5,6 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import Map from "@/components/nft-dating/Map";
 import CollectionsNearMe from "@/components/nft-dating/CollectionsNearMe";
 import { useEffect, useState } from "react";
-import { AnimatePresence } from "framer-motion";
 import { ChevronLeftIcon } from "@heroicons/react/20/solid";
 
 export default function NFTDatingPage() {
