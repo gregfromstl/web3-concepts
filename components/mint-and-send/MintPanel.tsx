@@ -26,6 +26,7 @@ export default function MintPanel({
         <AnimatePresence>
             {visible && (
                 <motion.div
+                    key="overlay"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 0.5 }}
                     exit={{ opacity: 0 }}
@@ -34,9 +35,10 @@ export default function MintPanel({
             )}
             {visible && (
                 <motion.div
-                    initial={{ translateY: 700 }}
+                    key="panel"
+                    initial={{ translateY: 800 }}
                     animate={{ translateY: 80 }}
-                    exit={{ translateY: 700 }}
+                    exit={{ translateY: 800 }}
                     className="absolute text-white bottom-0 left-0 pb-24 right-0 z-30 bg-gray-950 rounded-t-[2rem]"
                 >
                     <div className="bg-gray-900 overflow-hidden h-full rounded-[2rem] p-2 px-6 flex flex-col gap-8 text-center">

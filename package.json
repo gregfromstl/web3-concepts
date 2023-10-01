@@ -11,8 +11,10 @@
     "dependencies": {
         "@heroicons/react": "^2.0.18",
         "@rive-app/react-canvas": "^4.3.3",
+        "@types/lodash": "^4.14.199",
         "@types/mapbox-gl": "^2.7.15",
         "framer-motion": "^10.16.4",
+        "lodash": "^4.17.21",
         "mapbox-gl": "^2.15.0",
         "next": "latest",
         "react": "latest",
@@ -27,6 +29,7 @@
         "eslint": "latest",
         "eslint-config-next": "latest",
         "postcss": "latest",
+        "tailwind-scrollbar": "^3.0.5",
         "tailwindcss": "latest",
         "typescript": "latest"
     }

@@ -25,12 +25,14 @@ export default function Stake({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="w-screen overflow-hidden max-h-screen max-w-[500px] top-0 px-6 left-0 flex items-end right-0 bottom-0 bg-opacity-30 z-30 bg-black fixed"
+            key="confirm-overlay"
+            className="w-screen overflow-hidden max-h-screen mx-auto max-w-[500px] top-0 px-6 left-0 flex items-end right-0 bottom-0 bg-opacity-30 z-30 bg-black fixed"
         >
             <motion.div
                 initial={{ y: 1000 }}
                 animate={{ y: 50 }}
                 exit={{ y: 1000 }}
+                key="confirm-panel"
                 transition={{ duration: 0.5, type: "spring" }}
                 className="bg-white w-full rounded-t-2xl flex flex-col overflow-hidden items-center justify-start text-center via-transparent"
             >
