@@ -1,10 +1,6 @@
 "use client";
 
-import {
-    CheckIcon,
-    ChevronDownIcon,
-    ChevronUpIcon,
-} from "@heroicons/react/20/solid";
+import { ChevronUpIcon } from "@heroicons/react/20/solid";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
