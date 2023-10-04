@@ -31,7 +31,7 @@ export default function MintPanel({ visible }: { visible: boolean }) {
                     initial={{ translateY: 500 }}
                     animate={{ translateY: 80 }}
                     exit={{ translateY: 500 }}
-                    className="absolute flex items-center gap-8 p-6 text-center flex-col justify-between text-black bottom-0 left-0 pb-24 right-0 z-30 bg-white rounded-t-[2rem]"
+                    className="absolute flex items-center gap-8 p-6 text-center flex-col justify-between text-black bottom-0 left-0 pb-36 right-0 z-30 bg-white rounded-t-[2rem]"
                 >
                     <div className="flex flex-col items-center">
                         <div className="w-36 h-36 relative">
