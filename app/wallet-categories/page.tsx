@@ -100,7 +100,7 @@ export default function WalletCategoriesPage() {
     const [prevCategory, setPrevCategory] = useState<string | undefined>();
 
     return (
-        <main className="h-screen max-w-[500px] flex flex-col overflow-hidden mx-auto relative">
+        <div className="h-screen max-w-[500px] flex flex-col overflow-hidden mx-auto relative">
             <div className="flex justify-between items-center px-8 pt-8">
                 <div className="flex items-center gap-3">
                     <Image
@@ -189,6 +189,6 @@ export default function WalletCategoriesPage() {
                     )}
                 </AnimatePresence>
             </div>
-        </main>
+        </div>
     );
 }

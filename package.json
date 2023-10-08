@@ -9,6 +9,7 @@
         "lint": "next lint"
     },
     "dependencies": {
+        "@headlessui/react": "^1.7.17",
         "@heroicons/react": "^2.0.18",
         "@rive-app/react-canvas": "^4.3.3",
         "@types/lodash": "^4.14.199",

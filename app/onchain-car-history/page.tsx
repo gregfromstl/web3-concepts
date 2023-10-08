@@ -63,9 +63,9 @@ const listing: Listing = {
 
 export default function OnChainCarHistoryy() {
     return (
-        <main className="h-screen max-w-[500px] mx-auto relative">
+        <div className="h-screen max-w-[500px] mx-auto relative">
             <Header make={listing.car.make} model={listing.car.model} />
             <ListingScreen listing={listing} />
-        </main>
+        </div>
     );
 }
