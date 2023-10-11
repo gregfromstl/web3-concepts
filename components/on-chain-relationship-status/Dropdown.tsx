@@ -14,11 +14,9 @@ export default function Dropdown({
 }) {
     return (
         <Listbox value={selected} onChange={setSelected}>
-            <div className="relative h-full w-full">
+            <div className="relative h-full w-full max-w-full">
                 <Listbox.Button className="relative w-full cursor-default rounded-lg bg-gray-100 py-2 pl-3 pr-10 text-left ring-1 ring-gray-200 focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-indigo-300 sm:text-sm">
-                    <span className="block truncate">
-                        {options[selected].content}
-                    </span>
+                    <span className="block">{options[selected].content}</span>
                     <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
                         <ChevronDownIcon
                             className="h-5 w-5 text-gray-400"
@@ -27,14 +25,14 @@ export default function Dropdown({
                     </span>
                 </Listbox.Button>
                 <Transition
-                    enter="transition duration-100 ease-out"
+                    enter="transition duration-300 ease-out"
                     enterFrom="transform scale-95 opacity-0"
                     enterTo="transform scale-100 opacity-100"
-                    leave="transition duration-75 ease-out"
+                    leave="transition duration-300 ease-out"
                     leaveFrom="transform scale-100 opacity-100"
                     leaveTo="transform scale-95 opacity-0"
                 >
-                    <Listbox.Options className="rounded-xl absolute mt-1 max-h-60 w-full overflow-auto bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                    <Listbox.Options className="rounded-lg absolute mt-1 max-h-60 w-full overflow-auto bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                         {options.map((o, personIdx) => (
                             <Listbox.Option
                                 key={personIdx}
