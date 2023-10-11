@@ -22,6 +22,7 @@
         "openai": "^4.11.0",
         "react": "latest",
         "react-dom": "latest",
+        "react-icons": "^4.11.0",
         "react-map-gl": "^7.1.6"
     },
     "devDependencies": {
