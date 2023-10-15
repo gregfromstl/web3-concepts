@@ -149,7 +149,7 @@ export default function AuctionPanel({ clip }: { clip: string }) {
                                                 opacity: 0,
                                                 translateY: 10,
                                             }}
-                                            key={`bid-${idx}`}
+                                            key={`bid-${bid.address}`}
                                             className="flex items-center justify-between py-4"
                                         >
                                             <div className="flex items-center gap-2">
