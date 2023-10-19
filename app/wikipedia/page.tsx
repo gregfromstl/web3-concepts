@@ -91,7 +91,7 @@ export default function WikipediaPage() {
                             animate={{ bottom: 20 }}
                             key="popup"
                             onClick={() => setIsExpanded(!isExpanded)}
-                            className="bg-black absolute left-3 right-3 p-2.5 rounded-[2rem] overflow-hidden items-center shadow"
+                            className="bg-black active:scale-95 transition duration-200 absolute left-3 right-3 p-2.5 rounded-[2rem] overflow-hidden items-center shadow"
                         >
                             <div className="flex gap-3">
                                 <div className="bg-[#333] rounded-full p-2 text-[#999]">
