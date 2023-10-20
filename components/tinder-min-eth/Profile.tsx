@@ -4,7 +4,7 @@ import { MapPinIcon } from "@heroicons/react/24/outline";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
-import Modal from "./Modal";
+import Stake from "./Stake";
 
 export default function Profile({
     image,
@@ -17,13 +17,13 @@ export default function Profile({
     age: number;
     distance: number;
 }) {
-    const [liked, setLiked] = useState(false);
+    const [superLiked, setSuperLiked] = useState(false);
     const [visible, setVisible] = useState(true);
     const [modalOpen, setModalOpen] = useState(false);
 
-    const like = () => {
+    const superLike = () => {
         setModalOpen(false);
-        setLiked(true);
+        setSuperLiked(true);
         setTimeout(() => {
             setVisible(false);
         }, 500);
@@ -35,7 +35,7 @@ export default function Profile({
                 <motion.div
                     key={name}
                     className="relative w-full h-full shadow-lg rounded-xl overflow-hidden"
-                    exit={{ rotate: -45, translateX: 1000, scale: 1.05 }}
+                    exit={{ rotate: -45, translateY: -1000, scale: 1.05 }}
                     transition={{ duration: 0.4, ease: "easeOut" }}
                 >
                     <div className="absolute rounded-full overflow-hidden top-0 w-full flex z-10 gap-1 p-1 px-3 mt-1 h-3">
@@ -55,7 +55,7 @@ export default function Profile({
                         alt={image.alt}
                     />
 
-                    {liked && (
+                    {superLiked && (
                         <motion.div
                             key="super-like"
                             initial={{ scale: 2, opacity: 0 }}
@@ -64,11 +64,10 @@ export default function Profile({
                             className="absolute left-12 top-24 z-10"
                         >
                             <Image
-                                src="/tinder-min-eth/like-label.png"
-                                alt="like"
-                                width={98}
-                                height={50}
-                                className="-rotate-12 h-24 w-auto"
+                                src="/tinder-stake/super-like.png"
+                                alt="Super like icon"
+                                width={143}
+                                height={83}
                             />
                         </motion.div>
                     )}
@@ -78,7 +77,7 @@ export default function Profile({
                             <div className="text-4xl font-medium">{name}</div>
                             <div className="font-light text-4xl">{age}</div>
                         </div>
-                        <div className="font-light font-sans flex gap-1 text-lg items-center">
+                        <div className="font-light flex gap-1 text-lg items-center">
                             <MapPinIcon className="w-4 h-4" />
                             {distance} mile{distance > 1 ? "s" : ""} away
                         </div>
@@ -107,6 +106,7 @@ export default function Profile({
                                 src="/tinder-stake/super-like-button.png"
                                 width={100}
                                 height={100}
+                                onClick={() => setModalOpen(true)}
                                 alt="Super like button"
                                 className="w-16 h-16"
                             />
@@ -114,9 +114,8 @@ export default function Profile({
                                 src="/tinder-stake/like-button.png"
                                 width={100}
                                 height={100}
-                                onClick={() => setModalOpen(true)}
                                 alt="Like button"
-                                className="w-20 h-20 active:scale-90 transition duration-200"
+                                className="w-20 h-20"
                             />
                             <Image
                                 src="/tinder-stake/flash-button.png"
@@ -130,10 +129,10 @@ export default function Profile({
                 </motion.div>
             )}
             {modalOpen && (
-                <Modal
+                <Stake
                     close={() => setModalOpen(false)}
-                    onAccept={like}
-                    key="modal"
+                    onAccept={superLike}
+                    key="stake"
                 />
             )}
         </AnimatePresence>

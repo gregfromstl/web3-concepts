@@ -6,11 +6,11 @@ export default function ProfileStack() {
             <div className="absolute top-0 left-0 right-0 bottom-0">
                 <Profile
                     image={{
-                        src: "/tinder-min-eth/gary.jpeg",
-                        alt: "Gary profile picture",
+                        src: "/tinder-stake/bitboy.webp",
+                        alt: "Bitboy profile picture",
                     }}
-                    name="Gary"
-                    age={66}
+                    name="Ben"
+                    age={39}
                     distance={1000}
                 />
             </div>
@@ -18,12 +18,12 @@ export default function ProfileStack() {
             <div className="absolute top-0 left-0 right-0 z-10 bottom-0">
                 <Profile
                     image={{
-                        src: "/tinder-min-eth/saylor.jpeg",
-                        alt: "Saylor profile picture",
+                        src: "/tinder-stake/vitalik.jpg",
+                        alt: "Vitalik Buterin profile picture",
                     }}
-                    name="Michael"
-                    age={58}
-                    distance={42}
+                    name="Vitalik"
+                    age={29}
+                    distance={1}
                 />
             </div>
         </div>
