@@ -18,9 +18,9 @@ export default function Map({
     const mapContainer = useRef<any>(null);
     const map = useRef<any>(null);
 
-    const [lng, setLng] = useState(-122.38746);
-    const [lat, setLat] = useState(37.76701);
-    const [zoom, setZoom] = useState(9);
+    const [lng, setLng] = useState(-122.4258);
+    const [lat, setLat] = useState(37.7412);
+    const [zoom, setZoom] = useState(12);
 
     useEffect(() => {
         if (!location) return;
@@ -35,7 +35,7 @@ export default function Map({
         if (map.current) return; // initialize map only once
         map.current = new mapboxgl.Map({
             container: mapContainer.current,
-            style: "mapbox://styles/gregfromstl/cln4nybg5006401r72fzydxaj",
+            style: "mapbox://styles/gregfromstl/cln4nq0li006201ps13ix55zk",
             center: [lng, lat],
             zoom: zoom,
         });
@@ -51,39 +51,29 @@ export default function Map({
             <div className="relative w-full h-full">
                 <AnimatePresence>
                     {location && (
-                        <div className="absolute left-0 right-0 mx-auto w-32 flex items-center top-64">
+                        <div className="absolute left-0 right-0 mx-auto w-36 flex items-center top-40">
                             <motion.div
-                                key="walmart"
+                                key="innout"
                                 initial={{ opacity: 0, y: 50 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.2, delay: 1.2 }}
                                 className="bg-[#F6C44B] relative z-20 border-2 border-white text-center rounded-2xl text-2xl p-3 shadow-2xl font-bold"
                             >
-                                Walmart
+                                In-N-Out
                             </motion.div>
                             <motion.div
                                 initial={{ rotate: 0, opacity: 0, y: 0 }}
-                                animate={{ rotate: 20, opacity: 1, y: -50 }}
+                                animate={{ rotate: 10, opacity: 1, y: -50 }}
                                 transition={{ duration: 0.2, delay: 1.4 }}
-                                key="walmart-logo"
-                                className="p-3 w-14 h-14 z-10 rounded-2xl flex items-center justify-center shadow-lg bg-[#1A75CE] absolute right-2"
+                                key="innout-logo"
+                                className="overflow-hidden w-16 h-16 z-10 rounded-2xl flex items-center justify-center shadow-xl bg-white absolute right-11"
                             >
                                 <Image
-                                    src="/nft-dating/walmart.svg"
-                                    width={50}
-                                    height={50}
+                                    fill
+                                    src="/on-chain-maps/innout.webp"
                                     className=""
-                                    alt="Walmart logo"
+                                    alt="In-N-Out logo"
                                 />
-                            </motion.div>
-                            <motion.div
-                                key="69"
-                                initial={{ rotate: -30, opacity: 0, y: -80 }}
-                                animate={{ rotate: -15, opacity: 1, y: -50 }}
-                                transition={{ duration: 0.2, delay: 1.6 }}
-                                className="p-3 w-14 h-14 text-white flex items-center justify-center rounded-2xl shadow-lg z-30 bg-black text-2xl font-semibold absolute left-3"
-                            >
-                                69
                             </motion.div>
                         </div>
                     )}
